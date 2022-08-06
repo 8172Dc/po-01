@@ -1,0 +1,33 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./juyifansan.js"></script>
+</head>
+
+<body>
+    <button id="box">点击</button>
+    <script>
+        document.querySelector('#box').addEventListener('click', () => {
+            juyifansan({
+                method: 'GET',
+                url: ' http://49.233.105.60:8002/fenshou',
+                success: function (res) {
+                    alert(res.data[0].content);
+                }
+            })
+            // juyifansan({
+            //     method: 'post',
+            //     url: ' http://49.233.105.60:8002/qingshi',
+            //     success: function (res) {
+                    // alert(res.data[0].content);
+            //         
+            //     }
+            // })
+        })
+
+    </script>
+</body>
+
+</html>
